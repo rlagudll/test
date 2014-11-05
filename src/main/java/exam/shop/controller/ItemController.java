@@ -31,7 +31,7 @@ public class ItemController {
 		 String payload = req.getParameter("payload");
 		System.out.println(payload);
 		mav.setViewName("listItem");
-		mav.addObject("listItem", payload);
+		mav.addObject("listItem1", payload);
 		
 		return mav;
 	}
