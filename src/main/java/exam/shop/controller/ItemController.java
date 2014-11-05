@@ -27,11 +27,11 @@ public class ItemController {
 	@RequestMapping(value="/listItem.shop")
 	public ModelAndView listItem(ModelAndView mav, HttpServletRequest req) {
 		
-		String eventType = req.getHeader("X-GitHub-Event");
-
-		System.out.println(eventType);
+	
+		 String payload = req.getParameter("payload");
+		System.out.println(payload);
 		mav.setViewName("listItem");
-		mav.addObject("listItem", shopService.getItemList());
+		mav.addObject("listItem", payload);
 		
 		return mav;
 	}
