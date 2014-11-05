@@ -29,7 +29,7 @@ public class ItemController {
 		
 		String eventType = req.getHeader("X-GitHub-Event");
 
-		
+		System.out.println(eventType);
 		mav.setViewName("listItem");
 		mav.addObject("listItem", shopService.getItemList());
 		
